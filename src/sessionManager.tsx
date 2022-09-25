@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 const SessionManager: React.FC = () => {
   const history = useHistory();
   const getSession = () => {
-    const session = localStorage.getItem("nethunt");
+    const session = localStorage.getItem("hideandseek");
     if (!session) {
       history.push("/login");
     } else {
