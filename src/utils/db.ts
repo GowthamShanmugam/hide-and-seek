@@ -11,7 +11,7 @@ export const loginDB = async (
     },
   };
   try {
-    const response = await fetch(`${dbConfig.url}/getuser`, requestOptions);
+    const response = await fetch(`${dbConfig.url}/getUser`, requestOptions);
     const isJson = response.headers
       .get("content-type")
       ?.includes("application/json");
@@ -40,10 +40,7 @@ export const createAccount = async (
     }),
   };
   try {
-    const response = await fetch(
-      "http://127.0.0.1:8081/createuser",
-      requestOptions
-    );
+    const response = await fetch(`${dbConfig.url}/createUser`, requestOptions);
     const isJson = response.headers
       .get("content-type")
       ?.includes("application/json");

@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  left: 12%;
+  z-index: 7;
+}
+
+.tooltip {
+  position: absolute;
+  color: #fff;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.navbar {
+ 
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #666;
+  text-align: center;
+  padding-right: 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}

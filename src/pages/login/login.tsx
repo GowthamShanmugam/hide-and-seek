@@ -4,7 +4,6 @@ import {
   LoginForm,
   LoginMainFooterBandItem,
   LoginPage,
-  BackgroundImage,
 } from "@patternfly/react-core";
 import { useHistory } from "react-router-dom";
 import { loginDB, createAccount } from "../../utils/db";
@@ -39,7 +38,7 @@ const Login: React.FC = () => {
   const handleSingedUp = (event?: any) => {
     if (event) {
       event.preventDefault();
-    }
+    };
     setState((preState) => ({ ...preState, isSingedUp: !preState.isSingedUp }));
   };
 
@@ -152,25 +151,16 @@ const Login: React.FC = () => {
       loginButtonLabel="Create User"
     />
   );
-  const footerListItems = (
-    <img
-      className="login-form__sward"
-      src={"./img/fun.gif"}
-      alt="PatternFly logo"
-    />
-  );
 
   return (
     <>
-      <BackgroundImage src={"./img/background.jpg"} filter={defaultFilter} />
-      <div className="login-form__login">
+      <div className="background">
         <LoginPage
-          brandImgSrc={"./img/title.png"}
-          footerListItems={footerListItems}
-          backgroundImgAlt="Images"
+          className="login-form"
           loginTitle={
             !state.isSingedUp ? "Log in to your account" : "Create new account"
           }
+          brandImgSrc="./img/logo3.png"
           signUpForAccountMessage={signUpForAccountMessage}
         >
           {loginForm}
